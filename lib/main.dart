@@ -1,8 +1,7 @@
+import 'package:dummy/views/ticket_view.dart';
 import 'package:dummy/providers/provider.dart';
-import 'package:dummy/widgets/ticket_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 
 void main() {
   runApp(
@@ -34,15 +33,12 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            TicketWidget(),
-          ],
-        ),
-      ),
+      body: PageView(
+        children: const [
+         // TicketWidget(),
+          TicketView()
+        ],
+      )
     );
   }
 }
